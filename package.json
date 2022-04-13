@@ -1,0 +1,26 @@
+{
+  "name": "my-cool-package",
+  "devDependencies": {
+    "@lnu/eslint-config": "^1.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsdoc": "^30.5.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "htmlhint": "^0.14.1",
+    "jsonlint": "^1.6.3",
+    "snowpack": "^2.11.1",
+    "standard": "*",
+    "stylelint": "^13.7.1"
+  },
+  "scripts": {
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\"",
+    "lint": "npx eslint ./web || exit 0",
+    "lint:fix": "npx eslint ./web --fix || exit 0",
+    "htmlhint": "npx htmlhint ./web || exit 0",
+    "stylelint": "npx stylelint \"./web/**/*.css\" || exit 0"
+  }
+}

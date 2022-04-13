@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using create-snowpack-app" />
+  <link rel="stylesheet" type="text/css" href="/index.css" />
+  <title>Quiz</title>
+</head>
+<body onload="user()">
+<!--
+<img id="img" src="/logo.svg" />
+-->
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<p id="wrong"></p>
+
+<div class="container" id="questionHolder">
+  <p id="name"></p>
+  <p id="questions"></p>
+  <div class="intro">
+  <p id="user"></p>
+<input  id="username" minlength="3">
+<button id="start" onclick="play()">Play!</button>
+    <progress value="0" max="10" id="progressBar"></progress>
+  </div>
+  <div id="clock">
+    <span id="seconds"></span>
+  </div>
+
+  <form class="choiceQuestion"  id="buttons">
+    <input name="action" type="radio" id="1"  onclick="option()">
+    <label id="alt1" for="1"></label><br>
+    <input name="action" type="radio" id="2"  onclick="option()">
+    <label id="alt2" for="2"></label><br>
+    <input name="action" type="radio" id="3"  onclick="option()">
+    <label id="alt3" for="3"></label><br>
+    <input name="action"  type="radio" id="4"  onclick="option()">
+    <label id="alt4" for="4"></label><br>
+  </form>
+
+
+    <p class="allQuestions" id="time"></p>
+  <input autocomplete="off" class="inputQuestion" id="userAnswer"><br><br>
+  <p class="message" id="printmsg"></p><br><br>
+
+  <button class="inputQuestion" id="submit" onclick="sendAnswer()">Submit</button>
+  <button class="choiceQuestion" id="submitOption" onclick="sendAlternative()">Submit</button>
+  <button class="allQuestions" id="next" onclick="getNextQuestion()">Next Question</button>
+</div>
+
+<section id="high-score" class="is-hide">
+  <h1>Top 5 High-scores</h1>
+  <ol>
+    <li>--</li><li>--</li><li>--</li><li>--</li><li>--</li><li>--</li>
+  </ol>
+</section>
+
+<script type="text/javascript" src="/_dist_/view.js"></script>
+<script type="text/javascript" src="/_dist_/index.js"></script>
+<script type="text/javascript" src="/_dist_/score.js"></script>
+
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+</body>
+</html>
